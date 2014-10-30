@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/grey_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/color_darkgrey"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-50px"
+            android:layout_weight="6"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/company_name"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/title_of_command"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_order_details"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back_grey" />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_height="match_parent">
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableLayout"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true">
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_"
+                        android:textStyle="bold"
+                        android:textColor="@color/darkblue"
+                        />
+                <TextView
+                        android:id="@+id/odl_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="n/a"
+                        />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slip_number_"
+                        android:textStyle="bold"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/darkblue"
+                        />
+                <TextView
+                        android:id="@+id/odl_slip_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="n/a"
+                        />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="@string/creted_by_"
+                        android:textColor="@color/darkblue"
+                        />
+                <TextView
+                        android:id="@+id/odl_created_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="n/a"
+                        />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_alignParentBottom="true" android:layout_alignLeft="@+id/tableLayout">
+            <TableRow
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/subtotal"
+                        android:textColor="@color/darkblue"
+                        />
+                <TextView
+                        android:id="@+id/odl_subtotal"
+                        android:textColor="@color/darkblue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="n/a"
+                        />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vat"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/black"
+                        />
+                <TextView
+                        android:id="@+id/odl_vat"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="n/a"
+                        />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/g_total"
+                        android:textColor="@color/red"
+                        />
+                <TextView
+                        android:id="@+id/odl_g_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:text="n/a"
+                        />
+            </TableRow>
+            <TableRow>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/advance_payment"
+                        android:textColor="@color/green"
+                        />
+                <TextView
+                        android:id="@+id/odl_advance_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/green"
+                        android:text="n/a"
+                        />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/tableLayout"
+            android:layout_above="@id/tableLayout2"
+            android:id="@+id/frameLayout">
+
+            <!-- Here will be list -->
+
+            <ListView
+                android:id="@+id/odl_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@color/white"
+                android:divider="@color/darkgrey"
+                android:dividerHeight="3dp">
+            </ListView>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

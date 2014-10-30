@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- the theme applied to the application or activity -->
+    <style name="Theme.SailorTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/SailorActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/SailorActionBarTabText</item>
+        
+        <!--item name="android:padding">@dimen/margin_size</item-->
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="SailorActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="SailorActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+   </style>
+
+    <!-- ActionBar tabs text styles -->
+    <style name="SailorActionBarTabText" parent="@android:style/Widget.Holo.ActionBar.TabText"></style>
+
+</resources>

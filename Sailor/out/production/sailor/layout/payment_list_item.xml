@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_grey"
+              android:orientation="vertical">
+    <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:singleLine="true"
+            android:text="n/a"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    <TextView
+            android:id="@+id/slip_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:singleLine="true"
+            android:text="n/a"
+            android:textSize="14sp"
+            android:textColor="@color/darkblue"
+            />
+    <TextView
+            android:id="@+id/payment_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:singleLine="true"
+            android:text="n/a"
+            android:textSize="14sp"
+            android:textColor="@color/green"
+            />
+</LinearLayout>

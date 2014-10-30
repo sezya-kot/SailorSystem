@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/layout_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="right"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+        <ImageButton
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:background="@color/white"
+                android:layout_gravity="right"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_bottom_bar"
+            android:layout_below="@id/layout_top_bar"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/sc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="@string/select_currency"
+                android:textColor="@color/darkblue"
+                android:textSize="22sp"/>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RadioGroup
+                        android:id="@+id/select_options"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+                </RadioGroup>
+            </FrameLayout>
+        </ScrollView>
+        <Button
+                android:id="@+id/ok_confirmation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/green_button_bkgr"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

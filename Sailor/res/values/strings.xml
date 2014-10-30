@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SAILOR</string>
+
+    <!-- Strings for menu -->
+    <string name="sales">Sales</string>
+    <string name="financ">Financials</string>
+    <string name="crm">CRM</string>
+    <string name="reports">Reports</string>
+    <string name="gps">GPS</string>
+    <string name="calendar">Calendar</string>
+    <string name="others">Others</string>
+    <string name="commun">Communication</string>
+    <string name="synch">Synchronization</string>
+
+    <string-array name="main_menu_array">
+        <item>@string/sales		</item>
+        <item>@string/financ	</item>
+        <item>@string/crm		</item>
+        <item>@string/reports	</item>
+        <item>@string/gps		</item>
+        <item>@string/calendar	</item>
+        <item>@string/others	</item>
+        <item>@string/commun	</item>
+        <item>@string/synch		</item>
+        <item>@string/about		</item>
+    </string-array>
+    <string-array name="sales_select_options">
+        <item>@string/order</item>
+        <item>@string/dispatch_bill</item>
+        <item>@string/invoice</item>
+        <item>@string/change_refund</item>
+    </string-array>
+    <string-array name="financials_select_options">
+        <item>@string/cash</item>
+        <item>@string/credit_card</item>
+        <item>@string/cheque</item>
+        <item>@string/bond</item>
+    </string-array>
+    <string-array name="crm_select_options">
+        <item>@string/survey</item>
+        <item>@string/visit</item>
+        <item>@string/tasks</item>
+        <item>@string/activities</item>
+        <item>@string/stop_delay_cancellation</item>
+    </string-array>
+
+    <string name="date_hint">dd/mm/yyyy</string>
+    <string name="survey">Survey</string>
+    <string name="visit">Visit</string>
+    <string name="tasks">Tasks</string>
+    <string name="activities">Activities</string>
+    <string name="stop_delay_cancellation">Stop, Delay, Cancellation</string>
+    <string name="cash">Cash</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="cheque">Cheque</string>
+    <string name="bond">Bond</string>
+    <string name="enter">Enter</string>
+    <string name="enter_password">Enter your password:</string>
+    <string name="enter_license">Enter your license:</string>
+    <string name="enter_email">Enter your email:</string>
+    <string name="autorization">Autorization</string>
+    <string name="title_activity_sales">Sales</string>
+    <string name="select_option">Select option</string>
+    <string name="exit">Exit</string>
+    <string name="ask_exit">Do you want leave this window?</string>
+    <string name="yes">Yes</string>
+    <string name="about">About</string>
+    <string name="search_customer">Search customers</string>
+    <string name="list_empty">Nothing\.\.\.</string>
+    <string name="create_new">Create new</string>
+    <string name="list">List</string>
+    <string name="order">Order</string>
+    <string name="dispatch_bill">Dispatch bill</string>
+    <string name="invoice">Invoice</string>
+    <string name="change_refund">Change / Refund</string>
+    <string name="new_order">New Order</string>
+    <string name="general">General</string>
+    <string name="add_item">Add item</string>
+    <string name="create_order">Create order</string>
+    <string name="slip_number">Slip Number</string>
+    <string name="date">Date</string>
+    <string name="special_code">Special code</string>
+    <string name="division">Division</string>
+    <string name="department">Department</string>
+    <string name="plant">Plant</string>
+    <string name="warehouse">Warehouse</string>
+    <string name="currency">Currency</string>
+    <string name="save">Save</string>
+    <string name="select_date">Select date</string>
+    <string name="ok">OK</string>
+    <string name="select_currency">Select currency:</string>
+    <string name="select_division">Select division:</string>
+    <string name="select_department">Select departmet:</string>
+    <string name="select_warehouse">Select warehouse:</string>
+    <string name="select_plant">Select plant:</string>
+    <string name="select_unit">Select unit:</string>
+
+
+
+    <string name="dialog_new_order_title">New order will be created with the details below</string>
+    <string name="dialog_new_dispatch_title">New dispatch will be created with the details below</string>
+    <string name="dialog_new_invoice_title">New invoice will be created with the details below</string>
+    <string name="dialog_new_refund_title">New refund will be created with the details below</string>
+    <string name="enter_special_code">Enter special code</string>
+    <string name="item_code_description">Item Code / Description</string>
+    <string name="quantity">Quantity</string>
+    <string name="unit">Unit</string>
+    <string name="unit_price">Unit price</string>
+    <string name="item_subtotal_price">Item subtotal price</string>
+    <string name="add">Add</string>
+    <string name="serch_item_code">Search item code / description</string>
+    <string name="material">Material</string>
+    <string name="service">Service</string>
+    <string name="list_by_code">List by code</string>
+    <string name="list_by_description">List by description</string>
+    <string name="creted_by_">Created by:</string>
+    <string name="company">Company:</string>
+    <string name="created_by">Created by:</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="vat">VAT:</string>
+    <string name="g_total">G. Total:</string>
+    <string name="advance_payment">Advance payment:</string>
+    <string name="date_">Date:</string>
+    <string name="slip_number_">Slip number: </string>
+    <string name="order_list">Order List</string>
+    <string name="order_date">Order date:</string>
+    <string name="order_amount">Order amount:</string>
+    <string name="order_details">Order details</string>
+    <string name="new_dispatch_bill">New Dispatch Bill</string>
+    <string name="create_dispatch_bill">Create dispatch bill</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="dispatch_bill_list">Dispatch Bill List</string>
+    <string name="dispatch_bill_details">Dispatch Bill Details</string>
+    <string name="new_invoice">New Invoice</string>
+    <string name="create_invoice">Create invoice</string>
+    <string name="invoice_list">Invoice List</string>
+    <string name="invoice_details">Invoice Details</string>
+    <string name="new_refund">New Refund</string>
+    <string name="create_refund_ticket">Create refund ticket</string>
+    <string name="refund_ticket_list">Refund Ticket List</string>
+    <string name="title_activity_about">About</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_crm">CRM</string>
+    <string name="title_activity_reports">Reports</string>
+    <string name="empty">Empty</string>
+    <string name="server_no_answer">Server was fallen! Try again later!</string>
+
+    <string name="turkish_lira">Turkish Lira</string>
+    <string name="us_dollar">US Dollar</string>
+    <string name="euro">Euro</string>
+    <string name="great_britain_pound">Great Britain Pound</string>
+    <string name="saudi_arabian_riyal">Saudi Arabian Riyal</string>
+    <string name="sudanese_pound">Sudanese Pound</string>
+
+    <string-array name="currencies">
+        <item>@string/turkish_lira</item>
+        <item>@string/us_dollar</item>
+        <item>@string/euro</item>
+        <item>@string/great_britain_pound</item>
+        <item>@string/saudi_arabian_riyal</item>
+        <item>@string/sudanese_pound</item>
+    </string-array>
+
+    <string-array name="short_cur">
+        <item>TL</item>
+        <item>USD</item>
+        <item>EU</item>
+        <item>GBP</item>
+        <item>SAR</item>
+        <item>SP</item>
+    </string-array>
+
+    <string name="preference_file_key">com.sezyakot.sailor.PREFERENCE_FILE_KEY</string>
+    <string name="session_id">session_id</string>
+    <string name="user_name">user_name</string>
+    <string name="license">license</string>
+    <string name="uuid">UUID</string>
+    <string name="connecting">Connecting&#8230;</string>
+    <string name="no_internet">No Internet connection!</string>
+    <string name="no_login_pass">Incorrect login or password!</string>
+    <string name="no_license">Incorrect license!</string>
+    <string name="try_again">Try again later!</string>
+    <string name="try_again_server">Server not responding! Try again later!</string>
+    <string name="logout_info">You are logout!</string>
+    <string name="buy_module">You should buy this module!</string>
+    <string name="fill_fields">Fill all fields!</string>
+    <string name="title_activity_synchronization">SynchronizationActivity</string>
+    <string name="title_order_list">Order List</string>
+    <string name="title_order_details">Order Details</string>
+    <string name="company_name">Company Name</string>
+    <string name="search_item_code_description">Search item code / description</string>
+    <string name="search_item">Search Item</string>
+    <string name="data_saved">Data saved!</string>
+    <string name="check_any_options">You must check any options!</string>
+    <string name="not_change_currency">You can\'t change currency, if you have added some items!</string>
+    <string name="refund_detail">Refund Details</string>
+    <string name="order_date_">Order date: </string>
+    <string name="order_amount_">Order amount: </string>
+    <string name="dispatch_bill_date_">Dispatch bill date: </string>
+    <string name="dispatch_bill_amount_">Dispatch bill amount: </string>
+    <string name="invoice_date_">Invoice date: </string>
+    <string name="invoice_amount_">Invoice amount: </string>
+    <string name="refund_ticket_date_">Refund ticket date: </string>
+    <string name="refund_ticket_amount_">Refund ticket amount: </string>
+    <string name="cash_create_new_label">CashCreateNew</string>
+    <string name="new_cash_payment">New Cash Payment</string>
+    <string name="amount">Amount</string>
+    <string name="description">Description</string>
+    <string name="new_credit_card_payment">New Credit Card Payment</string>
+    <string name="new_bond_payment">New Bond Payment</string>
+    <string name="new_cheque_payment">New Cheque Payment</string>
+    <string name="checked_option">You must checked option!</string>
+    <string name="description_">Description:</string>
+    <string name="payment_amount_">Payment amount:</string>
+    <string name="new_cash_payment_title">New cash payment will be created with the details below</string>
+    <string name="enter_amount_">Enter amount:</string>
+    <string name="enter_value">Enter value here</string>
+    <string name="enter_description">Enter description</string>
+    <string name="credit_card_information">Credit card information</string>
+    <string name="holder_s_name">Holder\'s name</string>
+    <string name="number">Number</string>
+    <string name="expiry_date">Expity date</string>
+    <string name="cvv_code">CVV code</string>
+    <string name="cheque_information">Cheque Information</string>
+    <string name="issuer_s_name">Issuer\'s name</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="due_date">Due date</string>
+    <string name="guarantor_s_name">Guarantor\'s Name</string>
+    <string name="enter_card_number">Enter card number</string>
+    <string name="enter_holder_name">Enter holder\'s name</string>
+    <string name="enter_ccv_code">Enter CVV code</string>
+    <string name="enter_expiry_date">Enter expity date</string>
+    <string name="card_holders_name_">Card holder\'s name:</string>
+    <string name="card_number">Card number:</string>
+    <string name="expiry_date_">Expiry date:</string>
+    <string name="cvv_code_">CVV code:</string>
+    <string name="new_credit_card_payment_title">New credit card payment will be created with the details below</string>
+    <string name="enter_issuer_name_">Enter issuer\'s name</string>
+    <string name="enter_serial_number">Enter serial number</string>
+    <string name="card_issuers_name_">Cheque issuer\'s name:</string>
+    <string name="cheque_sn">Cheque serial number:</string>
+    <string name="cheque_due_date_">Cheque due date:</string>
+    <string name="new_cheque_payment_title">New cheque payment will be created with the details below</string>
+    <string name="new_bond_payment_title">New bond payment will be created with the details below</string>
+    <string name="enter_guarantors_name">Enter guarantor\'s name</string>
+    <string name="card_guarantors_name_">Bond guarantor\'s name:</string>
+    <string name="bond_sn">Bond serial number:</string>
+    <string name="bond_due_date_">Bond due date:</string>
+    <string name="bond_card_issuers_name_">Bond issuer\'s name:</string>
+    <string name="cash_payment_list">Cash Payment List</string>
+    <string name="cash_payment_date_">Cash payment date:</string>
+    <string name="credit_card_payment_date_">Credit card payment date:</string>
+    <string name="cheque_payment_date_">Cheque payment date:</string>
+    <string name="bond_payment_date_">Bond payment date:</string>
+    <string name="credit_card_payment_list">Credit Card Payment List</string>
+    <string name="cheque_payment_list">Cheque Payment List</string>
+    <string name="bond_payment_list">Bond Payment List</string>
+    <string name="some_problem_with_server">Some problem with server! Try again later!</string>
+
+</resources>
