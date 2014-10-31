@@ -19,7 +19,6 @@ import java.util.Calendar;
 public class CashCreateNew extends DefaultFinancialsCreate implements TaskFragment.TaskCallbacks{
     public static final String FRAG_TAG = "task_fragment";
     private static final String LOG_TAG = "CashCreateNew";
-    public String mStr;
 	@Override
 	protected void setTitle() {
 		mTitleName.setText(getString(R.string.new_cash_payment));

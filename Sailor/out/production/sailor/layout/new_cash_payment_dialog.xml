@@ -163,8 +163,8 @@
     </ScrollView>
     <ImageView
             android:id="@+id/animated_arrow_circle"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:visibility="invisible"
             android:background="@drawable/circular_arrow"
