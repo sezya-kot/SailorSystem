@@ -7,6 +7,7 @@ package com.sezyakot.sailor;
 import android.app.FragmentManager;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,10 +59,10 @@ public class FinancialsDialogCreateCashPayment extends DefaultDialogFinancials i
 
     @Override
     public void dismiss() {
-        super.dismiss();
         if (mTaskFragment != null) {
-            mTaskFragment.onDestroy();
+            mTaskFragment.onCancel();
         }
+        super.dismiss();
     }
 
     @Override
@@ -144,14 +145,15 @@ public class FinancialsDialogCreateCashPayment extends DefaultDialogFinancials i
     }
 
     private boolean doCreateWork() {
-        createPayment();
 
+        Bundle b = new Bundle();
+        b.putParcelable(Payment.PAYMENT,  createPayment());
         FragmentManager fm = getFragmentManager();
         if (mTaskFragment == null) {
             mTaskFragment = new TaskFragment();
-            fm.beginTransaction().add(new TaskFragment(), CashCreateNew.FRAG_TAG).commit();
+            mTaskFragment.setArguments(b);
+            fm.beginTransaction().add(mTaskFragment, CashCreateNew.FRAG_TAG).commit();
         }
-
         return false;
     }
 
@@ -168,13 +170,8 @@ public class FinancialsDialogCreateCashPayment extends DefaultDialogFinancials i
     }
 
     @Override
-    public void onProgressUpdate(int percent) {
-        Log.d(LOG_TAG, "FinancialsDialogCreateCashPayment percent: " + percent);
-
-        if (percent == 1) mStatusLine.setText("Connecting...");
-        if (percent == 20) mStatusLine.setText("Waiting for answer from server...");
-        if (percent == 60) mStatusLine.setText("Sending data...");
-        if (percent == 98) mStatusLine.setText("Done!!!");
+    public void onProgressUpdate(String msg) {
+        Log.d(LOG_TAG, "FinancialsDialogCreateCashPayment message: " + msg);
 
     }
 

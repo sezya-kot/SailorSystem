@@ -9,6 +9,7 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
 import com.sezyakot.sailor.model.Currency;
+import com.sezyakot.sailor.system.Debug;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,26 +37,31 @@ public class CashCreateNew extends DefaultFinancialsCreate implements TaskFragme
               .add(R.id.fragment_container, fragment)
               .commit();
 		}
-
 	}
 
     @Override
     public void onPreExecute() {
-
+        if (Debug.MODE) {
+            Log.d(LOG_TAG, "CashCreateNew: onPreExecute()");
+        }
     }
 
     @Override
-    public void onProgressUpdate(int percent) {
-        Log.v(LOG_TAG, "Percent: " + percent);
+    public void onProgressUpdate(String msg) {
+        Log.v(LOG_TAG, "Message: " + msg);
     }
 
     @Override
     public void onCancelled() {
-
+        if (Debug.MODE) {
+            Log.d(LOG_TAG, "CashCreateNew: onCancelled()");
+        }
     }
 
     @Override
     public void onPostExecute() {
-
+        if (Debug.MODE) {
+            Log.d(LOG_TAG, "CashCreateNew: onPostExecute()");
+        }
     }
 }

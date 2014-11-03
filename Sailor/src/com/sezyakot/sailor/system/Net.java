@@ -79,6 +79,8 @@ public class Net {
 
     }
 
+
+
 	public static boolean logout(Context context) {
 		preferences = new Preferences(context);
 		try {
@@ -102,7 +104,9 @@ public class Net {
 			List<NameValuePair> pairs = new ArrayList<NameValuePair>();
 			pairs.add(new BasicNameValuePair(DATA, dataJson));
 
-			Log.d(LOG_TAG, "nameValuePairs: " + pairs.toString());
+			if (Debug.VERBOSE){
+                Log.d(LOG_TAG, "nameValuePairs: " + pairs.toString());
+            }
 
 			// 6. set httpPost Entity
 			post.setEntity(new UrlEncodedFormEntity(pairs));

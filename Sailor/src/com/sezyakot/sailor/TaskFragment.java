@@ -9,6 +9,7 @@ import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
+import com.sezyakot.sailor.model.Payment;
 
 /**
  * This Fragment manages a single background task and retains
@@ -19,12 +20,11 @@ public class TaskFragment extends Fragment{
 	 * Callback interface through which the fragment will report the
 	 * task's progress and results back to the Activity.
 	 */
-
-
+    Payment mPayment;
 
 	static interface TaskCallbacks {
 		void onPreExecute();
-		void onProgressUpdate(int percent);
+		void onProgressUpdate(String msg);
 		void onCancelled();
 		void onPostExecute();
 	}
@@ -58,13 +58,18 @@ public class TaskFragment extends Fragment{
 
 		// Create and execute the background task.
 		mTask = new DummyTask();
-		mTask.execute();
+		mTask.execute((Payment) getArguments().getParcelable(Payment.PAYMENT));
 	}
+
+    public void onCancel() {
+       if (mTask != null){
+           mTask.cancel(true);
+       }
+    }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mTask.cancel(true);
     }
 
     /**
@@ -86,14 +91,13 @@ public class TaskFragment extends Fragment{
 	 * method in case they are invoked after the Activity's and
 	 * Fragment's onDestroy() method have been called.
 	 */
-	private class DummyTask extends AsyncTask<Void, Integer, Void> {
+	private class DummyTask extends AsyncTask<Payment, String, Void> {
 
 		@Override
 		protected void onPreExecute() {
 			if (mCallbacks != null && mFragmentCallbacks !=null) {
 				mCallbacks.onPreExecute();
                 mFragmentCallbacks.onPreExecute();
-
 			}
 		}
 
@@ -103,20 +107,19 @@ public class TaskFragment extends Fragment{
 		 * in a race condition.
 		 */
 		@Override
-		protected Void doInBackground(Void... ignore) {
+		protected Void doInBackground(Payment... pPayments) {
 			for (int i = 0; !isCancelled() && i < 100; i++) {
 				SystemClock.sleep(100);
-				publishProgress(i);
-
+				publishProgress(pPayments[0].getDescription());
 			}
 			return null;
 		}
 
 		@Override
-		protected void onProgressUpdate(Integer... percent) {
+		protected void onProgressUpdate(String... msg) {
 			if (mCallbacks != null && mFragmentCallbacks !=null) {
-				mCallbacks.onProgressUpdate(percent[0]);
-                mFragmentCallbacks.onProgressUpdate(percent[0]);
+				mCallbacks.onProgressUpdate(msg[0]);
+                mFragmentCallbacks.onProgressUpdate(msg[0]);
 			}
 		}
 
