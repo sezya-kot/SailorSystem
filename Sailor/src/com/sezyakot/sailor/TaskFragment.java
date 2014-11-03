@@ -9,7 +9,15 @@ import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.sezyakot.sailor.model.Payment;
+import com.sezyakot.sailor.model.RequestPayment;
+import com.sezyakot.sailor.system.Net;
+import org.apache.http.HttpResponse;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * This Fragment manages a single background task and retains
@@ -108,10 +116,22 @@ public class TaskFragment extends Fragment{
 		 */
 		@Override
 		protected Void doInBackground(Payment... pPayments) {
-			for (int i = 0; !isCancelled() && i < 100; i++) {
-				SystemClock.sleep(100);
-				publishProgress(pPayments[0].getDescription());
-			}
+            Net lNet = new Net();
+            publishProgress("Packing data!");
+            Gson gson = new GsonBuilder()
+                    .excludeFieldsWithoutExposeAnnotation()
+                    .create();
+            RequestPayment lRequestPayment = new RequestPayment(getActivity());
+            lRequestPayment.setPayments(Arrays.asList(pPayments));
+            String dataGson = gson.toJson(lRequestPayment);
+            publishProgress("Connecting...");
+            HttpResponse response = lNet.paymentSendToServer(dataGson, Net.SERVER_CASH_PAYMENT_CREATE);
+
+            if (response.getStatusLine().getStatusCode() == 200) {
+                publishProgress("All ok!");
+            } else {
+                publishProgress("Server Error!");
+            }
 			return null;
 		}
 

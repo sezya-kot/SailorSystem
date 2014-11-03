@@ -229,6 +229,7 @@ public class SynchronizationActivity extends DefaultActivity implements View.OnC
                                     Log.d(LOG_TAG, "mCustomers: "   + mCustomers);
                                     Log.d(LOG_TAG, "mProducts: "    + mProducts);
                                     Log.d(LOG_TAG, "mServices: "    + mServices);
+                                    Log.d(LOG_TAG, "mCashPayment.getCurrencyId: " + mCashPayments.get(mCashPayments.size()-1).getCurrencyId() );
                                 }
                                 try {
 	                                long lStartTime = new Date().getTime();

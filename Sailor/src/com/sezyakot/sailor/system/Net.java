@@ -48,11 +48,13 @@ public class Net {
     public static final String SERVER_ORDER_CREATE = SERVER_URL + "/orders/create";
     public static final String SERVER_DISPATCH_CREATE = SERVER_URL + "/dispatches/create";
 	public static final String SERVER_INVOICE_CREATE = SERVER_URL + "/invoices/create";
+    public static final String SERVER_CASH_PAYMENT_CREATE = SERVER_URL + "/cash/create";
 
 	public static final String SERVER_LOGOUT_URL = SERVER_URL + "/logout";
     public static final String SERVER_SYNCH_URL = SERVER_URL + "/synchronize";
 	static Preferences preferences;
 
+    private boolean mCancel;
 	/**
 	 * Check statement of Internet
 	 * 
@@ -171,8 +173,6 @@ public class Net {
 			+ "Message: " + user.getError().getMsg());
 			return false;
 		}
-				
-
 	}
 
 	public static boolean login(Context context) {
@@ -224,10 +224,7 @@ public class Net {
                 if (Debug.MODE) {
                     Log.d(LOG_TAG, content.toString());
                 }
-
-					// Read the server response and attempt to parse it as
-					// JSON
-
+					// Read the server response and attempt to parse it as JSON
 					Reader reader = new InputStreamReader(content);
                     if (Debug.MODE) {
                         Log.d(LOG_TAG, reader.toString());
@@ -238,9 +235,7 @@ public class Net {
                         Log.d(LOG_TAG, user.getData().toString());
                         Log.d(LOG_TAG, "" + gson.toJson(user));
                     }
-
                     content.close();
-
 			} else {
 				Log.e(LOG_TAG, "Server's responded with status code: " + statusLine.getStatusCode());
                 generateUserErrorCode();
@@ -272,6 +267,46 @@ public class Net {
         user = new User();
         user.setError(new Error());
         user.getError().setCode(22);
+    }
+
+    private HttpClient getHttpClient() {
+        HttpParams httpParameters = new BasicHttpParams();
+        HttpConnectionParams.setConnectionTimeout(httpParameters, CONNECTION_TIMEOUT);
+        HttpConnectionParams.setSoTimeout(httpParameters, SOCKET_TIMEOUT);
+        return new DefaultHttpClient(httpParameters);
+    }
+
+    public boolean isCancel() {
+        return mCancel;
+    }
+
+    public void setCancel(boolean c) {
+        mCancel = c;
+    }
+
+    public HttpResponse paymentSendToServer(String dataGson, String URL) {
+        try{
+            if (!isCancel()) {
+                // 1. create httpClient
+                HttpClient httpClient = getHttpClient();
+                // 2. make POST request to the given URL
+                HttpPost post = new HttpPost(URL);
+                List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+                pairs.add(new BasicNameValuePair(DATA, dataGson));
+                // 6. set httpPost Entity
+                post.setEntity(new UrlEncodedFormEntity(pairs));
+                return httpClient.execute(post);
+            }
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        return null;
     }
 
 

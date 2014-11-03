@@ -172,7 +172,7 @@ public class FinancialsDialogCreateCashPayment extends DefaultDialogFinancials i
     @Override
     public void onProgressUpdate(String msg) {
         Log.d(LOG_TAG, "FinancialsDialogCreateCashPayment message: " + msg);
-
+        mStatusLine.setText(msg);
     }
 
     @Override
