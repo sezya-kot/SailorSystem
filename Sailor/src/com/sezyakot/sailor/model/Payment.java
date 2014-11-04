@@ -148,27 +148,27 @@ public class Payment extends DefaultData implements Parcelable {
     };
 
     private Payment(Parcel in) {
-        int[] dataInt = new int[6];
+        int[] dataInt       = new int[6];
         in.readIntArray(dataInt);
         {
-            mId = dataInt[0];
-            mServerId = dataInt[1];
-            mVersion = dataInt[2];
-            mStatus = dataInt[3];
-            mCurrencyId = dataInt[4];
-            mCustomerId = dataInt[5];
+            mId             = dataInt[0];
+            mServerId       = dataInt[1];
+            mVersion        = dataInt[2];
+            mStatus         = dataInt[3];
+            mCurrencyId     = dataInt[4];
+            mCustomerId     = dataInt[5];
         }
 
-        mAmount = in.readDouble();
+        mAmount             = in.readDouble();
 
-        String[] dataStr = new String[6];
+        String[] dataStr    = new String[6];
         {
-            mName = dataStr[0];
-            mSlipNumber = dataStr[1];
-            mDate = dataStr[2];
-            mSpecialCode = dataStr[3];
-            mDescription = dataStr[4];
-            mCurrencyName = dataStr[5];
+            mName           = dataStr[0];
+            mSlipNumber     = dataStr[1];
+            mDate           = dataStr[2];
+            mSpecialCode    = dataStr[3];
+            mDescription    = dataStr[4];
+            mCurrencyName   = dataStr[5];
         }
 
     }
