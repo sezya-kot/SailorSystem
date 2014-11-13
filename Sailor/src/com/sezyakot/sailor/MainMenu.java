@@ -85,7 +85,7 @@ public class MainMenu extends ListActivity {
 				runActivity(i, position);
 				break;
 			}
-            // Financials
+            // Financial
 			case 1 : {
 				Intent i = new Intent(this, FinancialsActivity.class);
 				runActivity(i, position);

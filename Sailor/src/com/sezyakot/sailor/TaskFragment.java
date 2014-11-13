@@ -8,9 +8,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemClock;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 import com.sezyakot.sailor.model.Payment;
 import com.sezyakot.sailor.model.RequestPayment;
 import com.sezyakot.sailor.system.Net;
@@ -129,6 +127,7 @@ public class TaskFragment extends Fragment{
 
             if (response.getStatusLine().getStatusCode() == 200) {
                 publishProgress("All ok!");
+
             } else {
                 publishProgress("Server Error!");
             }

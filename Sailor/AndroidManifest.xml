@@ -11,6 +11,7 @@
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -34,7 +35,7 @@
 
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
-                android:value="AIzaSyATRiehr2vOCrsQdqtQmEoIzpqscYu9CPk"/>
+                android:value="@string/google_maps_key"/>
 
         <meta-data
                 android:name="com.google.android.gms.version"
@@ -183,9 +184,14 @@
             android:enabled="true">
         </activity>
         <activity
-                android:name="com.sezyakot.sailor.MapPane"
-                android:label="@string/gps"
-                android:enabled="true">
+            android:name="com.sezyakot.sailor.MapPane"
+            android:label="@string/gps"
+            android:enabled="true">
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.FinancialsPaymentDetailsActivity"
+            android:label="@string/financisals_payment_details_activity"
+            android:enabled="true">
         </activity>
 
     </application>
