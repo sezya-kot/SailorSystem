@@ -11,6 +11,5 @@
         <TextView
             android:id="@+id/title_of_category"
             style="@style/title_style" 
-            
             />
     </LinearLayout>

@@ -8,7 +8,7 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 
-public class MapPane extends Activity {
+public class MapPane extends DefaultActivity {
     final int RQS_GooglePlayServices = 1;
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
@@ -27,9 +27,12 @@ public class MapPane extends Activity {
             GooglePlayServicesUtil.getErrorDialog(resultCode, this,
                     RQS_GooglePlayServices);
         }
-
-        setContentView(R.layout.activity_maps);
-        //setUpMapIfNeeded();
+        setWrapper(true);
+        getLayoutInflater().inflate(R.layout.activity_maps, wrapper);
+        setContentView(wrapper);
+        setTitle(getString(R.string.gps));
+        setCategoryTitle(true);
+        setUpMapIfNeeded();
         }
 
     @Override
