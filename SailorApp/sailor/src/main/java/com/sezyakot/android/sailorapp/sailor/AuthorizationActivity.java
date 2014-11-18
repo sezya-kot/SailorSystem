@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -44,6 +45,22 @@ public class AuthorizationActivity extends DefaultActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+        if (Debug.MODE) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()
+                    .penaltyLog()
+                    .build()
+            );
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectLeakedSqlLiteObjects()
+                    .detectLeakedClosableObjects()
+                    .penaltyLog()
+                    .penaltyDeath()
+                    .build()
+            );
+        }
 		super.onCreate(savedInstanceState);
 		setWrapper();
 		getLayoutInflater().inflate(R.layout.login, wrapper);
@@ -56,8 +73,6 @@ public class AuthorizationActivity extends DefaultActivity {
                                                                                                             Intent i = new Intent(context, MainMenu.class);
                                                                                                             startActivity(i);
                                                                                                         }
-
-
 
         // get preferences
 		preferences = new Preferences(context);

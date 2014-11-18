@@ -1,4 +1,4 @@
-package com.sezyakot.android.sailorapp.sailor;
+package com.sezyakot.android.sailorapp.sailor.maps;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.sezyakot.android.sailorapp.sailor.DefaultActivity;
+import com.sezyakot.android.sailorapp.sailor.R;
 
 public class MapPane extends DefaultActivity {
     final int RQS_GooglePlayServices = 1;
@@ -15,25 +17,20 @@ public class MapPane extends DefaultActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setUI();
 
-        int resultCode = GooglePlayServicesUtil
-                .isGooglePlayServicesAvailable(getApplicationContext());
 
-        if (resultCode == ConnectionResult.SUCCESS) {
-            Toast.makeText(getApplicationContext(),
-                    "Google Play Services доступны", Toast.LENGTH_LONG)
-                    .show();
-        } else {
-            GooglePlayServicesUtil.getErrorDialog(resultCode, this,
-                    RQS_GooglePlayServices);
         }
+
+    private void setUI() {
         setWrapper(true);
         getLayoutInflater().inflate(R.layout.activity_maps, wrapper);
         setContentView(wrapper);
         setTitle(getString(R.string.gps));
         setCategoryTitle(true);
-        setUpMapIfNeeded();
-        }
+
+        
+    }
 
     @Override
     protected void onResume() {
