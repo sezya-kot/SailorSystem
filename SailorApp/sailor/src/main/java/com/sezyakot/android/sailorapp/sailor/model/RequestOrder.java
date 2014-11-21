@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class RequestOrder extends Session {
 
-    @Expose
-    @SerializedName("orders") private ArrayList<Order> mOrders;
+    @Expose @SerializedName("orders") private ArrayList<Order> mOrders;
 
     public RequestOrder() {}
 
