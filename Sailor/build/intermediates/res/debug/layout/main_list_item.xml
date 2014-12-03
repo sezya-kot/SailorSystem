@@ -1,0 +1,12 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    style="@style/list_menu_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_menu_item_bckg"
+    android:drawableLeft="@drawable/ic_sales"
+    android:drawablePadding="15dp"
+    android:gravity="center_vertical"
+    android:textSize="20sp" 
+    />
+<!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/main_list_item.xml -->

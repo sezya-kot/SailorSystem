@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@id/title_of_category"
+            style="@style/list_menu_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightblue"
+            android:drawableLeft="@drawable/ic_sales"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:padding="9dp"
+            android:text="@string/sales"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/main_menu_item_bckg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/customerName"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:drawableRight="@drawable/ic_back"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        >
+    <ScrollView
+		android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:paddingLeft="35dp"
+        android:paddingRight="30dp"
+        android:paddingTop = "15dp"
+        >
+
+        <RadioGroup
+            android:id="@+id/selectOptionRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_option" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_option"
+                android:textColor="@color/second_blue"
+                android:textSize="22sp" 
+                android:textStyle="bold"
+        		android:paddingBottom = "15dp"
+                />
+
+            <RadioButton
+                android:id="@+id/orderRB"
+                android:text="@string/order"
+                android:textSize="20sp" 
+                android:layout_marginBottom="5dp"
+			/>
+
+            <RadioButton
+                android:id="@+id/dispatchBillRB"
+                android:text="@string/dispatch_bill"
+                android:textSize="20sp" 
+                android:layout_marginBottom = "5dp"/>
+
+            <RadioButton
+                android:id="@+id/invoiceRB"
+                android:text="@string/invoice"
+                android:textSize="20sp" 
+                android:layout_marginBottom = "5dp"/>
+
+            <RadioButton
+                android:id="@+id/changeRefundRB"
+                android:text="@string/change_refund"
+                android:textSize="20sp" 
+                android:layout_marginBottom = "5dp"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" 
+            android:paddingTop = "15dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@android:color/black"
+                android:orientation="horizontal"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/createNewBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/green"
+                    android:paddingRight="3dp"
+                    android:drawablePadding="7dp"
+                    android:drawableStart="@drawable/ic_create_new"
+                    android:text="@string/create_new"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="2"
+                android:background="@android:color/black"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/listBt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/orange"
+                    android:drawablePadding="7dp"
+                    android:drawableStart="@drawable/ic_list"
+                    android:text="@string/list"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/select_option.xml -->

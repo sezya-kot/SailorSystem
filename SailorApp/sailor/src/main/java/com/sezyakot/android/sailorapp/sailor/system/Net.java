@@ -42,7 +42,7 @@ public class Net {
     public static User user = new User();
 	public static final String DATA = "data";
 	public static final String LOG_TAG = "NetUser";
-    public static final String SERVER_URL = "http://94.158.70.196:8080/service/mobile";
+    public static final String SERVER_URL = "http://192.168.0.115:8080/mobile";
     public static final String SERVER_CUSTOMER_URL = SERVER_URL + "/customers";
 	public static final String SERVER_LOGIN_URL = SERVER_URL + "/login";
     public static final String SERVER_ORDER_CREATE = SERVER_URL + "/orders/create";

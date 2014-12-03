@@ -7,12 +7,10 @@ public class Error {
 	@Expose private String msg;
 	
 	public Error() {
-		
 	}
 	
 	public String toString() {
 		return "Code: "+code+" Msg: "+msg;
-		
 	}
 
     public int getCode() {

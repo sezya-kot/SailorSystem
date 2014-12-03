@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="3dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/title_of_category"
+            style="@style/list_menu_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_menu_item_bckg"
+            android:drawableLeft="@drawable/ic_sales"
+            android:drawablePadding="15dp"
+            android:drawableRight="@drawable/ic_back"
+            android:gravity="center_vertical"
+            android:padding="9dp"
+            android:text="@string/sales"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="7dp" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@android:color/black"
+            android:padding="3dp" >
+
+            <EditText
+                android:id="@+id/searchET"
+                android:inputType="textFilter"
+                android:imeOptions="actionSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:hint="@string/search_customer"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:padding="3dp" >
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/darkgrey"
+                android:contentDescription="@string/search_customer"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#848484" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/black"
+        android:dividerPadding="3dp"
+        android:orientation="vertical"
+        android:showDividers="beginning" >
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list_empty" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/sales_item_list.xml -->

@@ -13,8 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import com.sezyakot.android.sailorapp.sailor.adapters.MainMenuArrayAdapter;
-import com.sezyakot.android.sailorapp.sailor.maps.MapPane;
+import com.sezyakot.android.sailorapp.sailor.maps.GPS;
 import com.sezyakot.android.sailorapp.sailor.system.Net;
 
 public class MainMenu extends ListActivity {
@@ -106,7 +107,7 @@ public class MainMenu extends ListActivity {
             //GPS
 			case 4 : {
             // Toast.makeText(this, getString(R.string.buy_module), Toast.LENGTH_SHORT).show();
-				Intent i = new Intent(this, MapPane.class);
+				Intent i = new Intent(this, GPS.class);
 				runActivity(i, position);
 				break;
 			}

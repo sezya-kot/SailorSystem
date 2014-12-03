@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/list_view_without_search_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+   		android:layout_marginRight="3dp"
+   		android:layout_marginBottom="3dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/grey_wrapper"
+            style="@style/grey_wrapper"
+            android:baselineAligned="false" >
+
+            <LinearLayout
+                android:id="@+id/black_wrapper_LLET"
+                style="@style/black_wrapper"
+                android:layout_weight="5" >
+
+                <EditText
+                    android:id="@+id/searchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:hint="@string/search_customer"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textFilter"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_btn"
+                android:contentDescription="@string/search_customer"
+                android:src="@drawable/ic_search" />
+        </LinearLayout>
+
+        <View style="@style/grey_divider" />
+
+        <LinearLayout
+            android:id="@+id/list_exactly_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/black"
+            android:dividerPadding="3dp"
+            android:orientation="vertical"
+            android:showDividers="beginning" >
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/grey"
+                android:smoothScrollbar="false"
+                android:background="@color/grey"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/item_list_pathern.xml -->

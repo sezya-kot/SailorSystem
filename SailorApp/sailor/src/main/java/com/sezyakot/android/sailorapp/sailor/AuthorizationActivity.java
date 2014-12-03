@@ -167,31 +167,34 @@ public class AuthorizationActivity extends DefaultActivity {
 
         @Override
 		protected void onPostExecute(String result) {
-			if (key) {
-                switch (Net.user.getError().getCode()) {
-                    case 0:
-                        preferences.setLicense(Net.sDataLogin.getLicense());
-                        preferences.setSession(Net.user.getData().getSession());
-                        preferences.setUUID(Net.sDataLogin.getUUID());
-                        preferences.setUserName(etEmail.getText().toString());
+//			if (key) {
+//                switch (Net.user.getError().getCode()) {
+//                    case 0:
+//                        preferences.setLicense(Net.sDataLogin.getLicense());
+//                        preferences.setSession(Net.user.getData().getSession());
+//                        preferences.setUUID(Net.sDataLogin.getUUID());
+//                        preferences.setUserName(etEmail.getText().toString());
+//
+//                        Intent i = new Intent(context, MainMenu.class);
+//                        startActivity(i);
+//
+//                        activity.finish();
+//                        break;
+//                    case 5: Toast.makeText(context, getString(R.string.no_login_pass), Toast.LENGTH_SHORT).show(); break;
+//                    case 40:
+//                    case 4:
+//                    case 31: Toast.makeText(context, getString(R.string.no_license), Toast.LENGTH_SHORT).show(); break;
+//                    case 3:
+//                    case 6:
+//                    case 22: Toast.makeText(context, getString(R.string.try_again), Toast.LENGTH_SHORT).show(); break;
+//                    default: Toast.makeText(context, getString(R.string.try_again), Toast.LENGTH_SHORT).show(); break;
+//                }
+//			} else {
+//                Toast.makeText(context, getString(R.string.some_problem_with_server), Toast.LENGTH_SHORT).show();
+//            }
 
-                        Intent i = new Intent(context, MainMenu.class);
-                        startActivity(i);
-
-                        activity.finish();
-                        break;
-                    case 5: Toast.makeText(context, getString(R.string.no_login_pass), Toast.LENGTH_SHORT).show(); break;
-                    case 40:
-                    case 4:
-                    case 31: Toast.makeText(context, getString(R.string.no_license), Toast.LENGTH_SHORT).show(); break;
-                    case 3:
-                    case 6:
-                    case 22: Toast.makeText(context, getString(R.string.try_again), Toast.LENGTH_SHORT).show(); break;
-                    default: Toast.makeText(context, getString(R.string.try_again), Toast.LENGTH_SHORT).show(); break;
-                }
-			} else {
-                Toast.makeText(context, getString(R.string.some_problem_with_server), Toast.LENGTH_SHORT).show();
-            }
+            Intent i = new Intent(context, MainMenu.class);
+            startActivity(i);
 			
 			if (dialog != null) dialog.dismiss();
 			unlockScreenOrientation();

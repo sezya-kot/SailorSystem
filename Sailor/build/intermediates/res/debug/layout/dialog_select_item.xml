@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/search_item_code_description"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="7"
+            android:background="@drawable/black_border"
+            android:hint="@string/search_item_code_description"
+            android:imeOptions="actionSearch"
+            android:inputType="textFilter"
+            android:padding="5dp"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/find_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/black_border_grey"
+            android:contentDescription="@string/search_item"
+            android:src="@drawable/ic_search" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/radio_group_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/choose_type_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" >
+
+            <RadioButton
+                android:id="@+id/material"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/material"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/choose_list_by_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" >
+
+            <RadioButton
+                android:id="@+id/list_by_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/list_by_code"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/list_by_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_by_description"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/listview_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/item_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:divider="@color/grey"
+            android:dividerHeight="3dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/dialog_select_item.xml -->

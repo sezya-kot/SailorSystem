@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sezyakot.sailor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+         The following two permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launch"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launch"
+        android:theme="@style/Theme.SailorTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.sezyakot.sailor.AuthorizationActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.MainMenu"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesActivity"
+            android:label="@string/title_activity_sales"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesSelectOptions"
+            android:label="@string/select_option"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.FinancialsSelectOptions"
+            android:label="@string/select_option"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.FinancialsActivity"
+            android:label="@string/title_activity_about"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.CrmActivity"
+            android:label="@string/title_activity_crm"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.ReportsActivity"
+            android:label="@string/title_activity_reports"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.CrmSelectOptions"
+            android:label="@string/crm"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesNewOrder"
+            android:label="@string/new_order"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesNewDispatch"
+            android:label="@string/new_dispatch_bill"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesNewInvoice"
+            android:label="@string/new_invoice"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SalesNewRefund"
+            android:label="@string/new_refund"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.SynchronizationActivity"
+            android:label="@string/title_activity_synchronization" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.OrderListActivity"
+            android:label="@string/title_order_list" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.DispatchListActivity"
+            android:label="@string/dispatch_bill_list" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.InvoiceListActivity"
+            android:label="@string/invoice_list" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.RefundListActivity"
+            android:label="@string/refund_ticket_list" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.OrderDetailsActivity"
+            android:label="@string/title_order_details" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.DispatchDetailsActivity"
+            android:label="@string/dispatch_bill_details" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.InvoiceDetailsActivity"
+            android:label="@string/invoice_details" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.RefundDetailsActivity"
+            android:label="@string/refund_detail" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.ListOfTempOrdersActivity"
+            android:enabled="true"
+            android:label="ListOfTempOrdersActivity" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.CashCreateNew"
+            android:enabled="true"
+            android:label="@string/cash_create_new_label"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.CreditCardCreateNew"
+            android:enabled="true"
+            android:label="@string/new_credit_card_payment" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.BondCreateNew"
+            android:enabled="true"
+            android:label="@string/new_bond_payment" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.ChequeCreateNew"
+            android:enabled="true"
+            android:label="@string/new_cheque_payment" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.PaymentListActivity"
+            android:enabled="true"
+            android:label="@string/cash_payment_list" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.MapPane"
+            android:enabled="true"
+            android:label="@string/gps" >
+        </activity>
+        <activity
+            android:name="com.sezyakot.sailor.FinancialsPaymentDetailsActivity"
+            android:enabled="true"
+            android:label="@string/financisals_payment_details_activity" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2014.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_marginBottom="20dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+    <TableLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TableRow android:layout_marginBottom="15dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company"
+                    android:textStyle="bold"
+                    android:layout_marginRight="100dp"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    />
+            <TextView
+                    android:id="@+id/oc_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+        </TableRow>
+        <TableRow android:layout_marginBottom="15dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="@string/date_"
+                    />
+            <TextView
+                    android:id="@+id/oc_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+        </TableRow>
+        <TableRow android:layout_marginBottom="15dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="@string/slip_number_"
+                    />
+            <TextView
+                    android:id="@+id/oc_slip_number"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:text="n/a"
+                    />
+        </TableRow>
+        <TableRow android:layout_marginBottom="30dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="@string/creted_by_"
+                    />
+            <TextView
+                    android:id="@+id/oc_created_by"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:text="n/a"
+                    />
+        </TableRow>
+        <TableRow android:layout_marginBottom="15dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:text="@string/description_"
+                    />
+            <TextView
+                    android:id="@+id/oc_description"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:maxLines="5"
+                    android:layout_height="wrap_content"
+                    android:text="n/a"
+                    />
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="@string/payment_amount_"
+            />
+    <TextView
+            android:id="@+id/payment_amount"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:maxLines="5"
+            android:layout_height="wrap_content"
+            android:text="n/a"
+            />
+
+    </LinearLayout>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:layout_gravity="center"
+
+                />
+
+
+    <View android:layout_width="match_parent" android:layout_height="2dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:background="@color/lightgrey"/>
+    <Button
+            android:id="@+id/cash_payment_create_btn"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="35dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/green_button_bkgr"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/create"
+            />
+</LinearLayout>
+    </ScrollView>
+    <ImageView
+            android:id="@+id/animated_arrow_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:background="@drawable/circular_arrow"
+            />
+</RelativeLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/new_cash_payment_dialog.xml -->

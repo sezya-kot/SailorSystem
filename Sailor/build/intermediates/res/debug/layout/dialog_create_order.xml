@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/oc_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            android:background="@color/white"
+            android:layout_gravity="right"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom_bar"
+        android:layout_below="@id/layout_top_bar"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dc_title_of_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="@string/dialog_new_order_title"
+            android:textColor="@color/red"
+            android:textSize="22sp"/>
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey"/>
+
+        <TableLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company"
+                    android:layout_marginRight="50dp"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/oc_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:text="@string/date_"
+                    />
+                <TextView
+                    android:id="@+id/oc_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:text="@string/slip_number_"
+                    />
+                <TextView
+                    android:id="@+id/oc_slip_number"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:text="n/a"
+                    />
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:text="@string/creted_by_"
+                    />
+                <TextView
+                    android:id="@+id/oc_created_by"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:text="n/a"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subtotal"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:layout_gravity="right"
+                    android:id="@+id/oc_subtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+                <TextView android:id="@+id/oc_currency"
+                          android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    />
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/vat"
+                    />
+                <TextView
+                    android:layout_gravity="right"
+                    android:id="@+id/oc_vat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="n/a"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/g_total"
+                    />
+                <TextView
+                    android:layout_gravity="right"
+                    android:id="@+id/oc_g_total"
+                    android:layout_width="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_height="wrap_content"
+                    android:text="n/afffff"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/advance_payment"
+                    />
+                <EditText
+                    android:layout_gravity="right"
+                    android:id="@+id/oc_advance_payment"
+                    android:layout_width="70dp"
+                    android:minWidth="100dp"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:background="@drawable/grey_edittext_with_border"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:hint="0"
+                    />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/grey"/>
+
+        <Button
+            android:id="@+id/oc_create_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/green_button_bkgr"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/create"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/dialog_create_order.xml -->

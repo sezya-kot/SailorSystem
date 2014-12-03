@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:color="@color/blue"/>
+    <item android:color="@color/lightblue"/>
+</selector><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/color/main_menu_item.xml -->

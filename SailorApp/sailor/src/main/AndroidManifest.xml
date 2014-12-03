@@ -184,7 +184,7 @@
             android:enabled="true">
         </activity>
         <activity
-            android:name=".maps.MapPane"
+            android:name=".maps.GPS"
             android:label="@string/gps"
             android:enabled="true">
         </activity>

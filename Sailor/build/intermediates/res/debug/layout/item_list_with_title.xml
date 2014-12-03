@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout_wrapper"
+    style="@style/linear_layout_wrapper" >
+
+    <LinearLayout
+        android:id="@+id/title_of_categoryLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/title_of_category"
+            style="@style/title_style" />
+    </LinearLayout>
+
+    <!-- For customers view -->
+    <LinearLayout
+        android:id="@+id/list_view_without_search_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/grey_wrapper"
+            style="@style/grey_wrapper"
+            android:baselineAligned="false" >
+
+            <LinearLayout
+                android:id="@+id/black_wrapper_LLET"
+                style="@style/black_wrapper"
+                android:layout_weight="5" >
+
+                <EditText
+                    android:id="@+id/searchET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:hint="@string/search_customer"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textFilter"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/search_btn"
+                    android:contentDescription="@string/search_customer"
+                    android:src="@drawable/ic_search" />
+        </LinearLayout>
+
+        <View style="@style/grey_divider" />
+
+        <LinearLayout
+            android:id="@+id/list_exactly_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/black"
+            android:dividerPadding="3dp"
+            android:orientation="vertical"
+            android:showDividers="beginning" >
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@android:id/empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_empty" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/item_list_with_title.xml -->

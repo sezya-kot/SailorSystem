@@ -135,7 +135,7 @@ public class SynchronizationActivity extends DefaultActivity implements View.OnC
                 // 1. create HttpClient
                 HttpClient client = new DefaultHttpClient();
                 // 2. make POST request to the given URL
-                HttpPost post = new HttpPost(Net.SERVER_SYNCH_URL);
+                HttpPost post = new HttpPost(Net.SERVER_CUSTOMER_URL);
                 // 3. build dataJson
                 Gson gson = new GsonBuilder()
 		                .excludeFieldsWithoutExposeAnnotation()
@@ -199,34 +199,34 @@ public class SynchronizationActivity extends DefaultActivity implements View.OnC
                                     Log.d(LOG_TAG, "Response: " + gson.toJson(response));
                                 }
                                 mCustomers      = new ArrayList<Customer>       (response.getData().getCustomers());
-                                mProducts       = new ArrayList<Product>        (response.getData().getProducts());
-                                mServices       = new ArrayList<Service>        (response.getData().getServices());
-                                mCurrencies     = new ArrayList<Currency>       (response.getData().getCurrencies());
-                                mUnits          = new ArrayList<Unit>           (response.getData().getUnits());
-                                mUnitDetails    = new ArrayList<UnitDetail>     (response.getData().getUnitDetails());
-                                mProductPrices  = new ArrayList<ProductPrice>   (response.getData().getProductPrices());
-                                mServicePrices  = new ArrayList<ServicePrice>   (response.getData().getServicePrices());
-                                mDepartments    = new ArrayList<Department>     (response.getData().getDepartments());
-                                mDivisions      = new ArrayList<Division>       (response.getData().getDivisions());
-                                mPlants         = new ArrayList<Plant>          (response.getData().getPlants());
-                                mWarehouses     = new ArrayList<Warehouse>      (response.getData().getWarehouses());
-                                mOrders         = new ArrayList<Order>          (response.getData().getOrders());
-                                mOrderItems     = new ArrayList<OrderItem>      (response.getData().getOrderItems());
-	                            mDispatches     = new ArrayList<Dispatch>       (response.getData().getDispatches());
-	                            mDispatchItems  = new ArrayList<DispatchItem>   (response.getData().getDispatchItems());
-	                            mInvoices       = new ArrayList<Invoice>        (response.getData().getInvoices());
-	                            mInvoiceItems   = new ArrayList<InvoiceItem>    (response.getData().getInvoiceItems());
-                                mCashPayments   = new ArrayList<CashPayment>    (response.getData().getCashPayments());
-                                mCreditCardPayments = new ArrayList<CreditCardPayment>(response.getData().getCreditCardPayments());
-                                mChequePayments = new ArrayList<ChequePayment>  (response.getData().getChequePayments());
-                                mBondPayments   = new ArrayList<BondPayment>    (response.getData().getBondPayments());
+//                                mProducts       = new ArrayList<Product>        (response.getData().getProducts());
+//                                mServices       = new ArrayList<Service>        (response.getData().getServices());
+//                                mCurrencies     = new ArrayList<Currency>       (response.getData().getCurrencies());
+//                                mUnits          = new ArrayList<Unit>           (response.getData().getUnits());
+//                                mUnitDetails    = new ArrayList<UnitDetail>     (response.getData().getUnitDetails());
+//                                mProductPrices  = new ArrayList<ProductPrice>   (response.getData().getProductPrices());
+//                                mServicePrices  = new ArrayList<ServicePrice>   (response.getData().getServicePrices());
+//                                mDepartments    = new ArrayList<Department>     (response.getData().getDepartments());
+//                                mDivisions      = new ArrayList<Division>       (response.getData().getDivisions());
+//                                mPlants         = new ArrayList<Plant>          (response.getData().getPlants());
+//                                mWarehouses     = new ArrayList<Warehouse>      (response.getData().getWarehouses());
+//                                mOrders         = new ArrayList<Order>          (response.getData().getOrders());
+//                                mOrderItems     = new ArrayList<OrderItem>      (response.getData().getOrderItems());
+//	                            mDispatches     = new ArrayList<Dispatch>       (response.getData().getDispatches());
+//	                            mDispatchItems  = new ArrayList<DispatchItem>   (response.getData().getDispatchItems());
+//	                            mInvoices       = new ArrayList<Invoice>        (response.getData().getInvoices());
+//	                            mInvoiceItems   = new ArrayList<InvoiceItem>    (response.getData().getInvoiceItems());
+//                                mCashPayments   = new ArrayList<CashPayment>    (response.getData().getCashPayments());
+//                                mCreditCardPayments = new ArrayList<CreditCardPayment>(response.getData().getCreditCardPayments());
+//                                mChequePayments = new ArrayList<ChequePayment>  (response.getData().getChequePayments());
+//                                mBondPayments   = new ArrayList<BondPayment>    (response.getData().getBondPayments());
 
 
                                 if (Debug.MODE) {
                                     Log.d(LOG_TAG, "mCustomers: "   + mCustomers);
-                                    Log.d(LOG_TAG, "mProducts: "    + mProducts);
-                                    Log.d(LOG_TAG, "mServices: "    + mServices);
-                                    Log.d(LOG_TAG, "mCashPayment.getCurrencyId: " + mCashPayments.get(mCashPayments.size()-1).getCurrencyId() );
+//                                    Log.d(LOG_TAG, "mProducts: "    + mProducts);
+//                                    Log.d(LOG_TAG, "mServices: "    + mServices);
+//                                    Log.d(LOG_TAG, "mCashPayment.getCurrencyId: " + mCashPayments.get(mCashPayments.size()-1).getCurrencyId() );
                                 }
                                 try {
 	                                long lStartTime = new Date().getTime();
@@ -234,51 +234,51 @@ public class SynchronizationActivity extends DefaultActivity implements View.OnC
                                     mDAO.openToWrite();
                                     {
                                         mDAO.clearTable(DBHelper.CUSTOMERS_TN);
-                                        mDAO.clearTable(DBHelper.PRODUCTS_TN);
-                                        mDAO.clearTable(DBHelper.SERVICES_TN);
-                                        mDAO.clearTable(DBHelper.CURRENCIES_TN);
-                                        mDAO.clearTable(DBHelper.PRODUCT_PRICES_TN);
-                                        mDAO.clearTable(DBHelper.SERVICE_PRICES_TN);
-                                        mDAO.clearTable(DBHelper.UNIT_TN);
-                                        mDAO.clearTable(DBHelper.UNIT_DETAIL_TN);
-                                        mDAO.clearTable(DBHelper.DEPARTMENT_TN);
-                                        mDAO.clearTable(DBHelper.DIVISION_TN);
-                                        mDAO.clearTable(DBHelper.PLANT_TN);
-                                        mDAO.clearTable(DBHelper.WAREHOUSE_TN);
-                                        mDAO.clearTable(DBHelper.ORDERS_TN);
-                                        mDAO.clearTable(DBHelper.ORDER_ITEMS_TN);
-                                        mDAO.clearTable(DBHelper.DISPATCHES_TN);
-                                        mDAO.clearTable(DBHelper.DISPATCH_ITEMS_TN);
-                                        mDAO.clearTable(DBHelper.INVOICES_TN);
-                                        mDAO.clearTable(DBHelper.INVOICE_ITEMS_TN);
-                                        mDAO.clearTable(DBHelper.CASH_PAYMENT_TN);
-                                        mDAO.clearTable(DBHelper.CREDIT_CARD_PAYMENT_TN);
-                                        mDAO.clearTable(DBHelper.CHEQUE_PAYMENT_TN);
-                                        mDAO.clearTable(DBHelper.BOND_PAYMENT_TN);
+//                                        mDAO.clearTable(DBHelper.PRODUCTS_TN);
+//                                        mDAO.clearTable(DBHelper.SERVICES_TN);
+//                                        mDAO.clearTable(DBHelper.CURRENCIES_TN);
+//                                        mDAO.clearTable(DBHelper.PRODUCT_PRICES_TN);
+//                                        mDAO.clearTable(DBHelper.SERVICE_PRICES_TN);
+//                                        mDAO.clearTable(DBHelper.UNIT_TN);
+//                                        mDAO.clearTable(DBHelper.UNIT_DETAIL_TN);
+//                                        mDAO.clearTable(DBHelper.DEPARTMENT_TN);
+//                                        mDAO.clearTable(DBHelper.DIVISION_TN);
+//                                        mDAO.clearTable(DBHelper.PLANT_TN);
+//                                        mDAO.clearTable(DBHelper.WAREHOUSE_TN);
+//                                        mDAO.clearTable(DBHelper.ORDERS_TN);
+//                                        mDAO.clearTable(DBHelper.ORDER_ITEMS_TN);
+//                                        mDAO.clearTable(DBHelper.DISPATCHES_TN);
+//                                        mDAO.clearTable(DBHelper.DISPATCH_ITEMS_TN);
+//                                        mDAO.clearTable(DBHelper.INVOICES_TN);
+//                                        mDAO.clearTable(DBHelper.INVOICE_ITEMS_TN);
+//                                        mDAO.clearTable(DBHelper.CASH_PAYMENT_TN);
+//                                        mDAO.clearTable(DBHelper.CREDIT_CARD_PAYMENT_TN);
+//                                        mDAO.clearTable(DBHelper.CHEQUE_PAYMENT_TN);
+//                                        mDAO.clearTable(DBHelper.BOND_PAYMENT_TN);
                                     }
                                     {
-                                        mDAO.putProductsToDb        (mProducts);
                                         mDAO.putCustomersToDb       (mCustomers);
-                                        mDAO.putServicesToDb        (mServices);
-                                        mDAO.putCurrenciesToDb      (mCurrencies);
-                                        mDAO.putUnitsToDb           (mUnits);
-                                        mDAO.putUnitDetailsToDb     (mUnitDetails);
-                                        mDAO.putProductPricesToDb   (mProductPrices);
-                                        mDAO.putServicePricesToDb   (mServicePrices);
-                                        mDAO.putDepartmentsToDb     (mDepartments);
-                                        mDAO.putDivisionsToDb       (mDivisions);
-                                        mDAO.putPlantsToDb          (mPlants);
-                                        mDAO.putWarehousesToDb      (mWarehouses);
-                                        mDAO.putOrdersToDb          (mOrders);
-                                        mDAO.putOrderItemsToDb      (mOrderItems);
-                                        mDAO.putDispatchesToDb      (mDispatches);
-                                        mDAO.putDispatchItemsToDb   (mDispatchItems);
-                                        mDAO.putInvoicesToDb        (mInvoices);
-                                        mDAO.putInvoiceItemsToDb    (mInvoiceItems);
-                                        mDAO.putCashPaymentToDb     (mCashPayments);
-                                        mDAO.putCreditCardPaymentToDb(mCreditCardPayments);
-                                        mDAO.putChequePaymentToDb   (mChequePayments);
-                                        mDAO.putBondPaymentToDb     (mBondPayments);
+//                                        mDAO.putProductsToDb        (mProducts);
+//                                        mDAO.putServicesToDb        (mServices);
+//                                        mDAO.putCurrenciesToDb      (mCurrencies);
+//                                        mDAO.putUnitsToDb           (mUnits);
+//                                        mDAO.putUnitDetailsToDb     (mUnitDetails);
+//                                        mDAO.putProductPricesToDb   (mProductPrices);
+//                                        mDAO.putServicePricesToDb   (mServicePrices);
+//                                        mDAO.putDepartmentsToDb     (mDepartments);
+//                                        mDAO.putDivisionsToDb       (mDivisions);
+//                                        mDAO.putPlantsToDb          (mPlants);
+//                                        mDAO.putWarehousesToDb      (mWarehouses);
+//                                        mDAO.putOrdersToDb          (mOrders);
+//                                        mDAO.putOrderItemsToDb      (mOrderItems);
+//                                        mDAO.putDispatchesToDb      (mDispatches);
+//                                        mDAO.putDispatchItemsToDb   (mDispatchItems);
+//                                        mDAO.putInvoicesToDb        (mInvoices);
+//                                        mDAO.putInvoiceItemsToDb    (mInvoiceItems);
+//                                        mDAO.putCashPaymentToDb     (mCashPayments);
+//                                        mDAO.putCreditCardPaymentToDb(mCreditCardPayments);
+//                                        mDAO.putChequePaymentToDb   (mChequePayments);
+//                                        mDAO.putBondPaymentToDb     (mBondPayments);
                                     }
                                     mDAO.close();
 	                                long lEndTime = new Date().getTime();
@@ -321,9 +321,9 @@ public class SynchronizationActivity extends DefaultActivity implements View.OnC
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             if (dialog != null) dialog.dismiss();
-	        //finish();
 	        Intent i = new Intent(mActivity, MainMenu.class);
-	        startActivity(i);
+	        //startActivity(i);
+	        //finish();
 
         }
 

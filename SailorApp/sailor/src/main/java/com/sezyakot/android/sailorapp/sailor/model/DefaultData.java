@@ -3,9 +3,6 @@ package com.sezyakot.android.sailorapp.sailor.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Android on 20.08.2014.
- */
 abstract public class DefaultData{
 				                protected int	    mId;            // Auto-generate ID
 	@Expose @SerializedName("id")       protected int       mServerId;      // id will be gotten from server

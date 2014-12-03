@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  >
+    <item android:showAsAction="always"
+            android:icon="@drawable/ic_edit" android:id="@+id/edit_item"  android:title="Edit"/>
+    <item android:showAsAction="always"
+            android:icon="@drawable/ic_delete" android:id="@+id/remove_item" android:title="Remove" />
+</menu><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/menu/item_menu.xml -->

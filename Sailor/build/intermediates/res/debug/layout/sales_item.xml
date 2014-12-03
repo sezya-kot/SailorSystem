@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/salesItemTV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_grey"
+    android:drawableLeft="@drawable/ic_empty"
+    android:drawablePadding="10dp"
+    android:padding="2dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="50dp"
+    android:singleLine="true"
+    android:textSize="16sp"
+    android:textStyle="bold" >
+
+</TextView><!-- From: file:/D:/GoogleDrive/GitHub/Sailor/Sailor/res/layout/sales_item.xml -->
